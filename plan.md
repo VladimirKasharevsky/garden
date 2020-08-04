@@ -1,0 +1,81 @@
+## Программа развития
+- Spring
+	- Spring IoC
+		- Proxies
+		- Bean processing
+		- Java config
+	- AOP
+	- Data access
+		- Spring JDBC
+		- JPA
+		- JPQL
+		- Spring Tx
+		- Spring Data
+		- NoSQL
+	- Spring MVC
+		- Angular (?)
+	- Spring Boot
+	- External clients
+		- REST
+			- Feign
+			- OkHttp
+		- SOAP
+	- Spring testing
+	- Reative extensions
+		- Manifesto
+		- Spring WebFlux
+	- Spring Cloud
+		- Actuator
+		- Config
+		- Service discovery
+			- Client side
+			- Server side
+		- Spring Cloud Bus
+		- Resiliency
+			- Circuit Breaking
+			- Rate limiting
+		- Zuul
+		- Sleuth, Zipkin
+		- Admin (?)
+		- Кеширование
+	- Spring Security
+	- Spring Batch (?)
+	- Spring Integration (?)
+- Архитектура
+	- Tech
+		- Docker
+		- Kubernetes
+			- Pod, Deployment, ReplicaSet, StatefulSet, Service
+			- ConfigMap, Persistent Volume, Persistent Volume Claim
+		- Helm
+		- OpenShift
+		- Service mesh (Istio)
+			- Sidecars
+		- Мониторинг и алертинг: USE, RED и Four Golden Signals; SLI, SLO, SLA (+)
+			- Prometheus. Grafana
+		- Opentracing и opentelemetry (+)
+	- Principal
+		- APIs
+			- REST (+)
+			- GraphQL
+			- gRPC
+			- Backend for frontends (?)
+			- ApiGateway
+		- Event Driven Architecture (+)
+			- Event Sourcing и CQRS
+			- Kafka
+		- Паттерны кэширования
+		- Микросервисы
+			- Микросервисы vs Монолиты
+			- Авторизация и аутентификация в микросервисной архитектуре
+			- Тестирование микросервисов
+		- Проектирование
+			- DDD
+			- Паттерны декомпозиции микросервисов
+			- Распределенные транзакции	
+			- Шардирование
+			- BASE. ACID. CAP.
+				- CP cистемы
+				- AP системы
+			- Эволюционное развитие архитектуры (?)
+		- Governance as a Code (?)
