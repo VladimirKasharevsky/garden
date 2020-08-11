@@ -1,0 +1,111 @@
+######################################
+# Регистрация
+# user/registration
+# request
+{
+  "login": "",
+  "password": ""
+}
+#response
+{
+  "error": null,
+  "status": "ok",
+  "userId": 123456
+  "status": "active"
+        
+}
+
+######################################
+# Удаление пользователя
+# admin/user/delete
+# request
+{
+  "userId": 123456
+}
+# response
+{
+  "error": null,
+  "status": "ok",
+}
+
+######################################
+# Блокировка пользователя
+# admin/user/block
+# request
+{
+  "userId": 123456
+}
+# response
+{
+  "error": null,
+  "status": "ok",
+  "status": "active"
+}
+        
+######################################
+# Создание профиля пользователя
+# user/profile/create
+# request
+{
+  "userId": 123456,
+  "firsName": "",
+  "secondName": "",
+  "phone": "",
+  "social": "",
+  "queueToGardens": [
+    "1": gardenId,
+    "2": gardenId
+    .....
+  ]
+}
+# response
+{
+  "error": null,
+  "status": "ok"
+}
+        
+######################################
+# Редактирование профиля пользователя
+# user/profile/change
+# request
+{
+  "userId": 123456,
+  "firsName": "",
+  "secondName": "",
+  "phone": "",
+  "social": "",
+  "queueToGardens": [
+    "1": gardenId,
+    "2": gardenId
+    .....
+  ]
+}
+# response
+{
+  "error": null,
+  "status": "ok"
+}
+        
+######################################
+# Поиск детского садика
+# garden/search
+# request (поля необязательны)
+{
+  "gardenId": 123456,
+  "adress": "",
+  "coordinates": "",
+  "gardenName": ""
+}
+# response
+{
+  "error": null,
+  "status": "ok",
+  "garden": {
+    "gardenId": 123456,
+    "adress": "",
+    "coordinates": "",
+    "gardenName": ""
+  }
+}
+
+
