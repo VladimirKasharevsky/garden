@@ -1,111 +1,88 @@
 ######################################
-# Регистрация
-# user/registration
+# Регистрация и создание профиля пользователя
+# POST user/registration
 # request
 {
   "login": "",
   "password": ""
+  "firsName": "",
+  "secondName": "",
+  "phone": "",
+  "queueToGardens": [gardenId, gardenId ...]
 }
 #response
 {
   "error": null,
-  "status": "ok",
-  "userId": 123456
-  "status": "active"
-        
-}
+  "message": "User created"
+  }
 
 ######################################
 # Удаление пользователя
-# admin/user/delete
-# request
-{
-  "userId": 123456
-}
+# DELETE admin/user/{userId}
+
 # response
 {
   "error": null,
-  "status": "ok",
+  "message": "User deleted",
 }
 
 ######################################
 # Блокировка пользователя
-# admin/user/block
-# request
-{
-  "userId": 123456
-}
+# PATCH admin/user/lock/{userId}
 # response
 {
   "error": null,
-  "status": "ok",
-  "status": "active"
+  "userStatus": "User locked"
 }
-        
+
 ######################################
-# Создание профиля пользователя
-# user/profile/create
-# request
-{
-  "userId": 123456,
-  "firsName": "",
-  "secondName": "",
-  "phone": "",
-  "social": "",
-  "queueToGardens": [
-    "1": gardenId,
-    "2": gardenId
-    .....
-  ]
-}
+# Разблокировка пользователя
+# PATCH admin/user/unlock/{userId}
 # response
 {
   "error": null,
-  "status": "ok"
+  "userStatus": "User unlocked"
 }
-        
+
 ######################################
 # Редактирование профиля пользователя
-# user/profile/change
+# POST user/change/{userId}
 # request
 {
-  "userId": 123456,
   "firsName": "",
   "secondName": "",
   "phone": "",
   "social": "",
-  "queueToGardens": [
-    "1": gardenId,
-    "2": gardenId
-    .....
-  ]
+  "queueToGardens": [gardenId, gardenId ...]
 }
 # response
 {
   "error": null,
-  "status": "ok"
+  "userStatus": "User info changed"
 }
         
 ######################################
 # Поиск детского садика
-# garden/search
+# GET garden/search?gardenId={gardenId}&adress={adress}&coordinates={coordinates}&gardenName={gardenName}
 # request (поля необязательны)
-{
-  "gardenId": 123456,
-  "adress": "",
-  "coordinates": "",
-  "gardenName": ""
-}
+
 # response
 {
   "error": null,
-  "status": "ok",
-  "garden": {
+  "garden":[ {
     "gardenId": 123456,
     "adress": "",
     "coordinates": "",
     "gardenName": ""
-  }
+  },
+    "garden":[ {
+    "gardenId": 123456,
+    "adress": "",
+    "coordinates": "",
+    "gardenName": ""
+    }
+        ......
+  ]
 }
 
 
