@@ -1,0 +1,18 @@
+version: '3.2'
+services:
+  registry:
+    image: 673345130/garden/garden_registry:0.0.1
+    ports:
+      - 8761:8761
+  gateway:
+    image: 673345130/garden/garden_gateway:0.0.1
+    ports:
+      - 80:8080
+  garden-garden:
+    image: 673345130/garden/garden_garden:0.0.1
+  garden-voucher:
+    image: 673345130/garden/garden_voucher:0.0.1
+  garden-user:
+    image: 673345130/garden/garden_user:0.0.1
+
+
