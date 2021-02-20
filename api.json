@@ -1,0 +1,88 @@
+######################################
+# Регистрация и создание профиля пользователя
+# POST user/registration
+# request
+{
+  "login": "",
+  "password": ""
+  "firsName": "",
+  "secondName": "",
+  "phone": "",
+  "queueToGardens": [gardenId, gardenId ...]
+}
+#response
+{
+  "error": null,
+  "message": "User created"
+  }
+
+######################################
+# Удаление пользователя
+# DELETE admin/user/{userId}
+
+# response
+{
+  "error": null,
+  "message": "User deleted",
+}
+
+######################################
+# Блокировка пользователя
+# PATCH admin/user/lock/{userId}
+# response
+{
+  "error": null,
+  "userStatus": "User locked"
+}
+
+######################################
+# Разблокировка пользователя
+# PATCH admin/user/unlock/{userId}
+# response
+{
+  "error": null,
+  "userStatus": "User unlocked"
+}
+
+######################################
+# Редактирование профиля пользователя
+# POST user/change/{userId}
+# request
+{
+  "firsName": "",
+  "secondName": "",
+  "phone": "",
+  "social": "",
+  "queueToGardens": [gardenId, gardenId ...]
+}
+# response
+{
+  "error": null,
+  "userStatus": "User info changed"
+}
+        
+######################################
+# Поиск детского садика
+# GET garden/search?gardenId={gardenId}&adress={adress}&coordinates={coordinates}&gardenName={gardenName}
+# request (поля необязательны)
+
+# response
+{
+  "error": null,
+  "garden":[ {
+    "gardenId": 123456,
+    "adress": "",
+    "coordinates": "",
+    "gardenName": ""
+  },
+    "garden":[ {
+    "gardenId": 123456,
+    "adress": "",
+    "coordinates": "",
+    "gardenName": ""
+    }
+        ......
+  ]
+}
+
+
